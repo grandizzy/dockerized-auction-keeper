@@ -69,6 +69,9 @@ After following the setup procedure below, this keeper works out of the box unde
 flip-eth-a keeper
 `./start-keeper.sh flip-eth-a | tee -a -i auction-keeper-flip-ETH-A.log`
 
+flip-bat keeper
+`./start-keeper.sh flip-bat | tee -a -i auction-keeper-flip-BAT.log`
+
 flop keeper
 `./start-keeper.sh flop | tee -a -i auction-keeper-flop.log`
 

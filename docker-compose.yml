@@ -30,3 +30,18 @@ services:
         max-size: "100m"
         max-file: "10"
     command: /opt/keeper/flop.sh model-mkr.sh
+  flip-bat:
+    build: .
+    image: makerdao/auction-keeper
+    container_name: flip-bat-a
+    volumes:
+      - $PWD/secrets:/opt/keeper/secrets
+      - $PWD/flip/bat-a/flip-bat-a.sh:/opt/keeper/flip-bat-a.sh
+      - $PWD/flip/bat-a/model-bat.sh:/opt/keeper/model-bat.sh
+      - $PWD/environment.sh:/opt/keeper/environment.sh
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+    command: /opt/keeper/flip-bat-a.sh model-bat.sh
